@@ -1,4 +1,4 @@
-FROM qnib/alplain-init
+FROM qnib/alplain-init:0.4.21
 
 ARG JDK="8u72-b15"
 ENV LANG=C.UTF-8 \
