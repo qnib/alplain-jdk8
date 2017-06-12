@@ -6,7 +6,7 @@ ENV LANG=C.UTF-8 \
     JAVA_HOME=/usr/lib/jvm/java-8-oracle \
     PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-8-oracle/bin/
 
-RUN apk add --update wget ca-certificates \
+RUN apk add --no-cache wget ca-certificates \
  && export URL="http://download.oracle.com/otn-pub/java/jdk/${JDK}/${JDK_HASH}/jdk-`echo "$JDK" | sed 's@-[^-]*$@@g'`-linux-x64.tar.gz" \
  && mkdir -p /usr/lib/jvm/java-8-oracle \
  && cd /tmp \
